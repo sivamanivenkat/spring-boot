@@ -1,28 +1,28 @@
-package com.luv2code.junitdemo;
+package com.Venkat.junitdemo;
 
 import java.util.List;
 
 public class DemoUtils {
 
-    private String academy = "Luv2Code Academy";
-    private String academyDuplicate = academy;
-    private String[] firstThreeLettersOfAlphabet = {"A", "B", "C"};
-    private List<String> academyInList = List.of("luv", "2", "code");
+    private String name = "Venkat";
+    private String nameDuplicate = name;
+    private String[] myName = {"Mani", "Venkat", "K"};
+    private List<String> myNameinList = List.of("Mani", "Venkat", "K");
 
-    public List<String> getAcademyInList() {
-        return academyInList;
+    public List<String> getMyNameinList() {
+        return myNameinList;
     }
 
-    public String getAcademy() {
-        return academy;
+    public String getName() {
+        return name;
     }
 
-    public String getAcademyDuplicate() {
-        return academyDuplicate;
+    public String getNameDuplicate() {
+        return nameDuplicate;
     }
 
-    public String[] getFirstThreeLettersOfAlphabet() {
-        return firstThreeLettersOfAlphabet;
+    public String[] getMyName() {
+        return myName;
     }
 
     public int add(int a, int b) {
