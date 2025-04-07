@@ -36,7 +36,11 @@ public class EmployeeRestController {
 
     @GetMapping("/employees/id/{employeeId}")
     public Employee getEmployee(@PathVariable int employeeId) {
-        return employeeList.get(employeeId);
+        for(Employee emp : employeeList)
+        if(empList.getId() == employeeId){
+           return emp;
+        }
+        return null;
     }
 
     @PostMapping("/employees")
@@ -62,11 +66,12 @@ public class EmployeeRestController {
 
     @PutMapping("/employees/id/{id}")
     public List<Employee> updateEmployee(@PathVariable int id, @RequestBody Employee updatedEmployee){
-        for(Employee emp : employeeList){
-            if(emp.getId() == id){
-                employeeList.set(id, updatedEmployee);
-            }
-        }
+        for (int i = 0; i < employeeList.size(); i++) {
+    if (employeeList.get(i).getId() == id) {
+        employeeList.set(i, updatedEmployee);
+        break;
+    }
+}
         return employeeList;
     }
 }
